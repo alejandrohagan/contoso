@@ -2,10 +2,9 @@
 % Please edit documentation in R/database.R
 \name{create_contoso_duckdb}
 \alias{create_contoso_duckdb}
-\alias{create_contonso_duckdb}
 \title{Creates duckdb versions of Contoso datasets}
 \usage{
-create_contonso_duckdb(dir = "temp")
+create_contoso_duckdb(dir = "temp")
 }
 \arguments{
 \item{dir}{A string indicating the type of DuckDB database to create. The options are:
@@ -37,8 +36,8 @@ You can choose to store the database in memory or in a temporary directory. If y
 }
 \examples{
 # Create a DuckDB version of Contoso datasets stored in a temporary directory
-create_contonso_duckdb(dir = "temp")
+create_contoso_duckdb(dir = "temp")
 
 # Create a DuckDB version of Contoso datasets stored in memory
-create_contonso_duckdb(dir = "in_memory")
+create_contoso_duckdb(dir = "in_memory")
 }

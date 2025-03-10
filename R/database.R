@@ -25,12 +25,12 @@
 #' - `fx`
 #' @examples
 #' # Create a DuckDB version of Contoso datasets stored in a temporary directory
-#' create_contonso_duckdb(dir = "temp")
+#' create_contoso_duckdb(dir = "temp")
 #'
 #' # Create a DuckDB version of Contoso datasets stored in memory
-#' create_contonso_duckdb(dir = "in_memory")
+#' create_contoso_duckdb(dir = "in_memory")
 #' @export
-create_contonso_duckdb <- function(dir="temp"){
+create_contoso_duckdb <- function(dir="temp"){
 
  dir <-  match.arg(
     arg =dir
