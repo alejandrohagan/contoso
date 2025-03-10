@@ -25,7 +25,7 @@ You can install the development version of contoso from [GitHub](https://github.
 
 ``` r
 # install.packages("pak")
-pak::pak("alejandrohagan/contonso")
+pak::pak("alejandrohagan/contoso")
 ```
 
 ## Example
