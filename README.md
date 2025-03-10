@@ -36,7 +36,7 @@ This is a basic example which shows you how to solve a common problem:
 library(contoso)
 
 # Create a DuckDB database containing Contoso datasets
-contoso_db <- create_contonso_duckdb(dir = "temp")
+contoso_db <- create_contoso_duckdb(dir = "temp")
 
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales
