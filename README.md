@@ -6,7 +6,7 @@
 
 Contoso is a synthetic dataset containing sample sales transaction data for the fictional "Contoso" company. It includes various supporting tables for business intelligence, such as customer, store, product, and currency exchange data.
 
-You can either load the datasets directly or use the function `create_contoso_database()` to create a DuckDB database that contains the following tables:
+You can either load the datasets directly or use the function `create_contonso_duckdb()` to create a DuckDB database that contains the following tables:
 
 -   sales
 -   customer
@@ -36,7 +36,7 @@ This is a basic example which shows you how to solve a common problem:
 library(contoso)
 
 # Create a DuckDB database containing Contoso datasets
-contoso_db <- create_contoso_database(dir = "temp")
+contoso_db <- create_contonso_duckdb(dir = "temp")
 
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales
