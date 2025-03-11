@@ -84,7 +84,8 @@ pak::pak("alejandrohagan/contoso")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Example of how to create a duckdb database with Conotoso tables loaded
+
 
 ```{r}
 #| eval: false

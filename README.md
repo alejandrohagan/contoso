@@ -8,9 +8,7 @@ for the fictional “Contoso” company. It includes various supporting
 tables for business intelligence, such as customer, store, product, and
 currency exchange data.
 
-You can either load the datasets directly or use the function
-`create_contoso_duckdb()` to create a DuckDB database that contains the
-following tables:
+The package comes with the following datasets:
 
 - **sales**:
   - Contains information about sales transactions, including the total
@@ -36,6 +34,10 @@ following tables:
 - **orderrows**:
   - Contains detailed line items for each order, including product key,
     quantity, and price for each item in the order.
+
+  You can either load the datasets directly or use the function
+  `create_contoso_duckdb()` to create a DuckDB database that contains
+  the following tables:
 
 The Contoso dataset is a fictional set of data created by Microsoft. It
 is commonly used for educational and demonstration purposes to showcase
@@ -75,7 +77,7 @@ pak::pak("alejandrohagan/contoso")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Example of how to create a duckdb database with Conotoso tables loaded
 
 ``` r
 library(contoso)
@@ -86,13 +88,3 @@ contoso_db <- create_contoso_duckdb(dir = "temp")
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales
 ```
-
-## Features
-
-- Realistic Sales Data: Simulates a variety of sales transactions,
-  customer details, store locations, and product information.
-- Multiple Data Tables: Supports multiple tables like sales, customers,
-  store details, product catalog, exchange rates, and time-series
-  information.
-- Easy-to-Use: Load and use data directly or create a full DuckDB
-  database for seamless analysis with create_contoso_database().
