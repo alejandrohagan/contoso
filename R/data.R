@@ -4,7 +4,7 @@
 #' It provides insights into the transactions that have occurred, including order dates, delivery dates, customer and store information,
 #' as well as product details.
 #'
-#' @format A data frame with 17 columns:
+#' @format A data frame with sales columns:
 #' \describe{
 #'   \item{order_key}{\code{double} Unique identifier for each order.}
 #'   \item{line_number}{\code{double} Line number within the order (for multi-line orders).}
@@ -19,10 +19,13 @@
 #'   \item{unit_cost}{\code{double} The cost per unit of the product.}
 #'   \item{currency_code}{\code{character} The currency code used for the transaction (e.g., USD, EUR).}
 #'   \item{exchange_rate}{\code{double} The exchange rate applied to the currency, if applicable.}
-#'   \item{revenue}{\code{double} A product's unit_price multiplied by quantity.}
+#'   \item{gross_revenue}{\code{double} A product's unit_price multiplied by quantity.}
+#'   \item{net_revenue}{\code{double} A product's net_price multiplied by quantity.}
+#'   \item{unit_discount}{\code{double} A product's unit_price minute net_price.}
+#'   \item{discounts}{\code{double} A product's unit_discount multiplied by quantity.}
 #'   \item{cogs}{\code{double} A product's unit_cost multiplied by quantity.}
-#'   \item{margin}{\code{double} A product's revenue minus cogs.}
-#'   \item{unit_margin}{\code{double} A product unit_price minus unit_cost.}
+#'   \item{margin}{\code{double} A product's net_revenue minus cogs.}
+#'   \item{unit_margin}{\code{double} A product margin divided by quantity.}
 #' }
 #' @source https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
 "sales"
@@ -131,7 +134,7 @@
 #'   \item{currency_code}{\code{character} The currency code used for the order (e.g., USD, EUR).}
 #' }
 #' @source https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
-"order"
+"orders"
 
 
 

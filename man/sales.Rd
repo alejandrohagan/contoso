@@ -5,7 +5,7 @@
 \alias{sales}
 \title{Sales Data from the Contonso Dataset}
 \format{
-A data frame with 17 columns:
+A data frame with sales columns:
 \describe{
   \item{order_key}{\code{double} Unique identifier for each order.}
   \item{line_number}{\code{double} Line number within the order (for multi-line orders).}
@@ -20,10 +20,13 @@ A data frame with 17 columns:
   \item{unit_cost}{\code{double} The cost per unit of the product.}
   \item{currency_code}{\code{character} The currency code used for the transaction (e.g., USD, EUR).}
   \item{exchange_rate}{\code{double} The exchange rate applied to the currency, if applicable.}
-  \item{revenue}{\code{double} A product's unit_price multiplied by quantity.}
+  \item{gross_revenue}{\code{double} A product's unit_price multiplied by quantity.}
+  \item{net_revenue}{\code{double} A product's net_price multiplied by quantity.}
+  \item{unit_discount}{\code{double} A product's unit_price minute net_price.}
+  \item{discounts}{\code{double} A product's unit_discount multiplied by quantity.}
   \item{cogs}{\code{double} A product's unit_cost multiplied by quantity.}
-  \item{margin}{\code{double} A product's revenue minus cogs.}
-  \item{unit_margin}{\code{double} A product unit_price minus unit_cost.}
+  \item{margin}{\code{double} A product's net_revenue minus cogs.}
+  \item{unit_margin}{\code{double} A product margin divided by quantity.}
 }
 }
 \source{

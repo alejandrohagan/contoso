@@ -27,7 +27,7 @@ The package comes with the following datasets:
 - **date**:
   - Contains date-related information, including date, week, month, quarter, and year for use in time-based analysis.
 
-- **order**:
+- **orders**:
   - Contains information about individual orders, including order key, customer key, order date, and store information.
 
 - **orderrows**:
@@ -39,6 +39,8 @@ The package comes with the following datasets:
  The Contoso dataset is a fictional set of data created by Microsoft. It is commonly used for educational and demonstration purposes to showcase various features of data analysis, business intelligence tools, and data processing techniques
 
 This dataset is perfect for practicing time series analysis, financial modeling, or any business intelligence-related tasks.
+
+Using view, you can see the columns' label using the [labelled](https://larmarange.github.io/labelled/index.html) package.^[Inspiration from [Crystal Lewis](https://cghlewis.com/blog/dict_clean/) excellent blog post]
 
 The data is sourced from the [sqlbi](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data) github site 
 
@@ -84,7 +86,7 @@ pak::pak("alejandrohagan/contoso")
 
 ## Example
 
-Example of how to create a duckdb database with Conotoso tables loaded
+Example of how to create a duckdb database with Contoso tables loaded is below:
 
 
 ```{r}

@@ -52,7 +52,7 @@ create_contoso_duckdb <- function(dir="temp"){
   duckdb::duckdb_register(con,"date"     ,contoso::date,overwrite = TRUE)
   duckdb::duckdb_register(con,"fx"       ,contoso::fx,overwrite = TRUE)
   duckdb::duckdb_register(con,"store"    ,contoso::store,overwrite = TRUE)
-  duckdb::duckdb_register(con,"order"    ,contoso::order,overwrite = TRUE)
+  duckdb::duckdb_register(con,"orders"    ,contoso::orders,overwrite = TRUE)
   duckdb::duckdb_register(con,"orderrows",contoso::orderrows,overwrite = TRUE)
 
 
@@ -61,6 +61,8 @@ create_contoso_duckdb <- function(dir="temp"){
   product_db <- dplyr::tbl(con,dplyr::sql("select * from product"))
   customer_db <- dplyr::tbl(con,dplyr::sql("select * from customer"))
   store_db <- dplyr::tbl(con,dplyr::sql("select * from store"))
+  orders_db <- dplyr::tbl(con,dplyr::sql("select * from orders"))
+  orderrows_db <- dplyr::tbl(con,dplyr::sql("select * from orderrows"))
   fx_db <- dplyr::tbl(con,dplyr::sql("select * from fx"))
   date_db <- dplyr::tbl(con,dplyr::sql("select * from date"))
 
@@ -72,6 +74,8 @@ create_contoso_duckdb <- function(dir="temp"){
     ,store=store_db
     ,fx=fx_db
     ,date=date_db
+    ,orders=orders_db
+    ,orderrows=orderrows_db
   )
 
   return(out)

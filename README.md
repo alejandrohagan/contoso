@@ -47,6 +47,10 @@ processing techniques
 This dataset is perfect for practicing time series analysis, financial
 modeling, or any business intelligence-related tasks.
 
+Using view, you can see the columns’ label using the
+[labelled](https://larmarange.github.io/labelled/index.html)
+package.[^1]
+
 The data is sourced from the
 [sqlbi](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data)
 github site
@@ -77,7 +81,8 @@ pak::pak("alejandrohagan/contoso")
 
 ## Example
 
-Example of how to create a duckdb database with Conotoso tables loaded
+Example of how to create a duckdb database with Contoso tables loaded is
+below:
 
 ``` r
 library(contoso)
@@ -88,3 +93,6 @@ contoso_db <- create_contoso_duckdb(dir = "temp")
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales
 ```
+
+[^1]: Inspiration from [Crystal
+    Lewis](https://cghlewis.com/blog/dict_clean/) excellent blog post
