@@ -34,7 +34,7 @@ The package comes with the following datasets:
   - Contains detailed line items for each order, including product key, quantity, and price for each item in the order.
   
   
-  You can either load the datasets directly or use the function `create_contoso_duckdb()` to create a DuckDB  that contains the following tables:
+  You can either load the datasets directly or use the function `create_contoso_duckdb()` to create a DuckDB database that contains the following tables:
   
  The Contoso dataset is a fictional set of data created by Microsoft. It is commonly used for educational and demonstration purposes to showcase various features of data analysis, business intelligence tools, and data processing techniques
 
