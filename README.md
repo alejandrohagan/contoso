@@ -13,7 +13,7 @@ The package comes with the following datasets:
 - **sales**:
   - Contains information about sales transactions, including the total
     sales amount, customer, store, and product involved. This also has
-    calcualted column for gross_revenue, net_revenue, margin, and cogs.
+    calculated column for gross_revenue, net_revenue, margin, and cogs.
 
   - This is created via a series of joins from the below tables and
     great starting place for your analytics
