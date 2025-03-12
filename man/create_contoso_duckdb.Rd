@@ -4,16 +4,15 @@
 \alias{create_contoso_duckdb}
 \title{Creates duckdb versions of Contoso datasets}
 \usage{
-create_contoso_duckdb(dir = "temp")
+create_contoso_duckdb(db_dir = c("in_memory"), size = "10K")
 }
 \arguments{
-\item{dir}{A string indicating the type of DuckDB database to create. The options are:
-- `"temp"`: Creates a temporary database stored on disk in a temporary directory.
-- `"in_memory"`: Creates an in-memory database that will not persist after the R session ends.
-Default is `"temp"`.}
+\item{db_dir}{"temp" or "in_memory"}
+
+\item{size}{"10K","100k","1M" or "10M"}
 }
 \value{
-A list of `tbl` objects that are references to the Contoso datasets stored in the DuckDB database. The list contains the following tables:
+A list of lazy `tbl` objects that are references to the Contoso datasets stored in the DuckDB database. The list contains the following tables:
 - `sales`
 - `product`
 - `customer`
@@ -35,9 +34,6 @@ The [create_contonso_duckdb] function registers the following Contoso datasets a
 You can choose to store the database in memory or in a temporary directory. If you choose "temp", the database will be created in a temporary file on disk. If you choose "in_memory", the database will be created entirely in memory and will be discarded after the R session ends.
 }
 \examples{
-# Create a DuckDB version of Contoso datasets stored in a temporary directory
-create_contoso_duckdb(dir = "temp")
-
 # Create a DuckDB version of Contoso datasets stored in memory
-create_contoso_duckdb(dir = "in_memory")
+create_contoso_duckdb(db_dir = "in_memory",size="10K")
 }
