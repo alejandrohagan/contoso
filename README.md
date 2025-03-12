@@ -88,7 +88,7 @@ below:
 library(contoso)
 
 # Create a DuckDB database containing Contoso datasets
-contoso_db <- create_contoso_duckdb(dir = "temp")
+contoso_db <- create_contoso_duckdb(dir = "temp",size="10K")
 
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales
