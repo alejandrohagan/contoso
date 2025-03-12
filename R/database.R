@@ -6,7 +6,7 @@
 #' @name create_contoso_duckdb
 #'
 #' @details
-#' The [create_contonso_duckdb] function registers the following Contoso datasets as DuckDB tables:
+#' The [create_contoso_duckdb] function registers the following Contoso datasets as DuckDB tables:
 #' - `sales`: Contains sales transaction data.
 #' - `product`: Contains details about products, including attributes like product name, manufacturer, and category.
 #' - `customer`: Contains customer demographic and geographic information.
@@ -24,7 +24,7 @@
 #' - `fx`
 #' @examples
 #' # Create a DuckDB version of Contoso datasets stored in memory
-#' create_contoso_duckdb(db_dir = "in_memory",size="10K")
+#' db_lst <- create_contoso_duckdb(db_dir = "in_memory",size="10K")
 #' @export
 create_contoso_duckdb <- function(db_dir= c("in_memory"),size="10K"){
 
@@ -51,9 +51,6 @@ create_contoso_duckdb <- function(db_dir= c("in_memory"),size="10K"){
 
 
   size_choice <- paste0("path_",match.arg(toupper(size),c("10K","100K","1M","10M")))
-
-
-
 
   # make temp dir
 
@@ -88,6 +85,8 @@ create_contoso_duckdb <- function(db_dir= c("in_memory"),size="10K"){
   #create sql query
 
   query <- glue::glue("
+
+-- date
 CREATE OR REPLACE TABLE fx AS
 SELECT
     Date AS date,
@@ -95,7 +94,6 @@ SELECT
     ToCurrency AS to_currency,
     Exchange AS exchange
 FROM read_csv_auto('{full_file_path[1]}');
-
 
 -- customer
 

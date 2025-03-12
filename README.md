@@ -12,7 +12,11 @@ The package comes with the following datasets:
 
 - **sales**:
   - Contains information about sales transactions, including the total
-    sales amount, customer, store, and product involved.
+    sales amount, customer, store, and product involved. This also has
+    calcualted column for gross_revenue, net_revenue, margin, and cogs.
+
+  - This is created via a series of joins from the below tables and
+    great starting place for your analytics
 - **customer**:
   - Contains details about customers, such as customer key, name,
     address, and demographic information.
@@ -28,7 +32,7 @@ The package comes with the following datasets:
 - **date**:
   - Contains date-related information, including date, week, month,
     quarter, and year for use in time-based analysis.
-- **order**:
+- **orders**:
   - Contains information about individual orders, including order key,
     customer key, order date, and store information.
 - **orderrows**:
@@ -37,7 +41,7 @@ The package comes with the following datasets:
 
   You can either load the datasets directly or use the function
   `create_contoso_duckdb()` to create a DuckDB database that contains
-  the following tables:
+  all of the tables.
 
 The Contoso dataset is a fictional set of data created by Microsoft. It
 is commonly used for educational and demonstration purposes to showcase
@@ -87,10 +91,10 @@ below:
 ``` r
 library(contoso)
 
-# Create a DuckDB database containing Contoso datasets
+# Create a DuckDB database containing Contoso datasets and assign it to a list
 contoso_db <- create_contoso_duckdb(dir = "temp",size="10K")
 
-# Access the sales dataset from the database
+# Access the sales dataset from the list of database tables
 sales_data <- contoso_db$sales
 ```
 

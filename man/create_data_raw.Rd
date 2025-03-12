@@ -10,7 +10,7 @@ create_data_raw()
 list of csv files
 }
 \description{
-Creates the data-raw files of the 10K row size Contonso files if they
+Creates the data-raw files of the 10K row size Contoso files if they
 they do not already exists.
 
 If it exists it will return nothing

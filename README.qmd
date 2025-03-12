@@ -10,7 +10,9 @@ Contoso is a synthetic dataset containing sample sales transaction data for the 
 The package comes with the following datasets:
 
 - **sales**:
-  - Contains information about sales transactions, including the total sales amount, customer, store, and product involved.
+  - Contains information about sales transactions, including the total sales amount, customer, store, and product involved. This also has calcualted column for gross_revenue, net_revenue, margin, and cogs.
+  
+  - This is created via a series of joins from the below tables and great starting place for your analytics
 
 - **customer**:
   - Contains details about customers, such as customer key, name, address, and demographic information.
@@ -34,7 +36,7 @@ The package comes with the following datasets:
   - Contains detailed line items for each order, including product key, quantity, and price for each item in the order.
   
   
-  You can either load the datasets directly or use the function `create_contoso_duckdb()` to create a DuckDB database that contains the following tables:
+  You can either load the datasets directly or use the function `create_contoso_duckdb()` to create a DuckDB database that contains all of the tables.
   
  The Contoso dataset is a fictional set of data created by Microsoft. It is commonly used for educational and demonstration purposes to showcase various features of data analysis, business intelligence tools, and data processing techniques
 
@@ -80,6 +82,8 @@ You can install the development version of contoso from [GitHub](https://github.
 
 ```{r}
 #| eval: false
+#| label: install
+
 # install.packages("pak")
 pak::pak("alejandrohagan/contoso")
 ```
@@ -95,10 +99,10 @@ Example of how to create a duckdb database with Contoso tables loaded is below:
 
 library(contoso)
 
-# Create a DuckDB database containing Contoso datasets
-contoso_db <- create_contoso_duckdb(dir = "temp")
+# Create a DuckDB database containing Contoso datasets and assign it to a list
+contoso_db <- create_contoso_duckdb(dir = "temp",size="10K")
 
-# Access the sales dataset from the database
+# Access the sales dataset from the list of database tables
 sales_data <- contoso_db$sales
 
 ```
