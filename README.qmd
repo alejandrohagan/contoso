@@ -9,36 +9,36 @@ Contoso is a synthetic dataset containing sample sales transaction data for the 
 
 The package comes with the following datasets:
 
-- **sales**:
+- **sales**
   - Contains information about sales transactions, including the total sales amount, customer, store, and product involved. This also has calculated column for gross_revenue, net_revenue, margin, and cogs.
   
   - This is created via a series of joins from the below tables and great starting place for your analytics
 
-- **customer**:
+- **customer**
   - Contains details about customers, such as customer key, name, address, and demographic information.
 
-- **store**:
+- **store**
   - Contains information about stores, including store key, name, location, and related details.
 
-- **product**:
+- **product**
   - Contains information about products, such as product key, name, category, and price.
 
-- **fx**:
+- **fx**
   - Contains foreign exchange rate data, mapping currency pairs to their exchange rates on specific dates.
 
-- **date**:
+- **date**
   - Contains date-related information, including date, week, month, quarter, and year for use in time-based analysis.
 
-- **orders**:
+- **orders**
   - Contains information about individual orders, including order key, customer key, order date, and store information.
 
-- **orderrows**:
+- **orderrows**
   - Contains detailed line items for each order, including product key, quantity, and price for each item in the order.
   
   
-  You can either load the datasets directly or use the function `create_contoso_duckdb()` to create a DuckDB database that contains all of the tables.
+  You can either load the datasets directly from the name space or use the  `create_contoso_duckdb()` function to create a DuckDB database that contains all of the tables.
   
- The Contoso dataset is a fictional set of data created by Microsoft. It is commonly used for educational and demonstration purposes to showcase various features of data analysis, business intelligence tools, and data processing techniques
+ The Contoso dataset is a fictional set of data created by Microsoft. It is commonly used for educational and demonstration purposes to showcase various features of data analysis, business intelligence tools, and data processing techniques.
 
 This dataset is perfect for practicing time series analysis, financial modeling, or any business intelligence-related tasks.
 
