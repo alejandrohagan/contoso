@@ -1,12 +1,15 @@
 # README
 
 
-# contoso
+\#Contoso
 
 Contoso is a synthetic dataset containing sample sales transaction data
 for the fictional “Contoso” company. It includes various supporting
 tables for business intelligence, such as customer, store, product, and
 currency exchange data.
+
+This dataset is perfect for practicing time series analysis, financial
+modeling, or any business intelligence-related tasks.
 
 The package comes with the following datasets:
 
@@ -35,29 +38,25 @@ The package comes with the following datasets:
   - Contains detailed line items for each order, including product key,
     quantity, and price for each item in the order.
 
-  You can either load the datasets directly or use the function
-  `create_contoso_duckdb()` to create a DuckDB database that contains
-  the following tables:
+Built into the package is the 10K row version of the dataset.
 
-The Contoso dataset is a fictional set of data created by Microsoft. It
-is commonly used for educational and demonstration purposes to showcase
-various features of data analysis, business intelligence tools, and data
-processing techniques
+If you want a larger dataset, there is also 100K, 1M and 10M which can
+be created with `create_contoso_duckdb()` function.
 
-This dataset is perfect for practicing time series analysis, financial
-modeling, or any business intelligence-related tasks.
+This will create a local duckdb database and attach the specified row
+size version from a motherduck database into your local database.
 
 Using view, you can see the columns’ label using the
 [labelled](https://larmarange.github.io/labelled/index.html)
 package.[^1]
 
-The data is sourced from the
+The data is originally sourced from the
 [sqlbi](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data)
 github site
 
 ## Dataset overview
 
-![Contoso Overview](fig/contoso_schema.svg)
+![Contoso](fig/contoso_schema.svg)
 
 The relationship keys that join each of the tables are listed below.
 
@@ -71,7 +70,7 @@ The relationship keys that join each of the tables are listed below.
 
 ## Installation
 
-You can install the development version of contoso from
+You can install the development version of package from
 [GitHub](https://github.com/alejandrohagan/contoso) with:
 
 ``` r
@@ -87,7 +86,7 @@ below:
 ``` r
 library(contoso)
 
-# Create a DuckDB database containing Contoso datasets
+# Creates a list of DuckDB database containing Contoso datasets
 contoso_db <- create_contoso_duckdb(dir = "temp",size = "1m")
 
 # Access the sales dataset from the database
