@@ -28,7 +28,7 @@ The package comes with the following datasets:
 - **date**:
   - Contains date-related information, including date, week, month,
     quarter, and year for use in time-based analysis.
-- **order**:
+- **orders**:
   - Contains information about individual orders, including order key,
     customer key, order date, and store information.
 - **orderrows**:
@@ -61,13 +61,13 @@ github site
 
 The relationship keys that join each of the tables are listed below.
 
-| sales         | customer     | product     | store     | order        | orderrows   | fx            |
-|---------------|--------------|-------------|-----------|--------------|-------------|---------------|
-| order_key     |              |             |           | order_key    | order_key   |               |
-| customer_key  | customer_key |             |           | customer_key |             |               |
-| store_key     |              |             | store_key | store_key    |             |               |
-| product_key   |              | product_key |           |              | product_key |               |
-| currency_code |              |             |           |              |             | from_currency |
+| sales | customer | product | store | order | orderrows | fx |
+|----|----|----|----|----|----|----|
+| order_key |  |  |  | order_key | order_key |  |
+| customer_key | customer_key |  |  | customer_key |  |  |
+| store_key |  |  | store_key | store_key |  |  |
+| product_key |  | product_key |  |  | product_key |  |
+| currency_code |  |  |  |  |  | from_currency |
 
 ## Installation
 
@@ -88,7 +88,7 @@ below:
 library(contoso)
 
 # Create a DuckDB database containing Contoso datasets
-contoso_db <- create_contoso_duckdb(dir = "temp")
+contoso_db <- create_contoso_duckdb(dir = "temp",size = "1m")
 
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales

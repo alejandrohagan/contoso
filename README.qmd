@@ -96,7 +96,7 @@ Example of how to create a duckdb database with Contoso tables loaded is below:
 library(contoso)
 
 # Create a DuckDB database containing Contoso datasets
-contoso_db <- create_contoso_duckdb(dir = "temp")
+contoso_db <- create_contoso_duckdb(dir = "temp",size = "1m")
 
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales

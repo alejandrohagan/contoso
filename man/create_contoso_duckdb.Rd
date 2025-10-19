@@ -4,12 +4,12 @@
 \alias{create_contoso_duckdb}
 \title{Creates duckdb versions of Contoso datasets}
 \usage{
-create_contoso_duckdb(db_dir = c("in_memory"), size = "10K")
+create_contoso_duckdb(db_dir = c("in_memory"), size = "100K")
 }
 \arguments{
 \item{db_dir}{"temp" or "in_memory"}
 
-\item{size}{"10K","100k","1M" or "10M"}
+\item{size}{"100k","1M" or "10M"}
 }
 \value{
 A list of lazy `tbl` objects that are references to the Contoso datasets stored in the DuckDB database. The list contains the following tables:
@@ -18,6 +18,9 @@ A list of lazy `tbl` objects that are references to the Contoso datasets stored 
 - `customer`
 - `store`
 - `fx`
+- `store`
+- `orderrows`
+- `date`
 }
 \description{
 Creates duckdb versions of Contoso datasets
@@ -35,5 +38,5 @@ You can choose to store the database in memory or in a temporary directory. If y
 }
 \examples{
 # Create a DuckDB version of Contoso datasets stored in memory
-create_contoso_duckdb(db_dir = "in_memory",size="10K")
+create_contoso_duckdb(db_dir = "in_memory",size="100K")
 }
