@@ -56,7 +56,7 @@ github site
 
 ## Dataset overview
 
-![Contoso](fig/contoso_schema.svg)
+![Contoso](man/figures/contoso.svg)
 
 The relationship keys that join each of the tables are listed below.
 

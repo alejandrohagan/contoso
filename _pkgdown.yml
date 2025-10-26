@@ -1,7 +1,4 @@
 url: https://alejandrohagan.github.io/contoso/
 template:
   bootstrap: 5
-vignette: >
-  %\VignetteIndexEntry{Vignette's Title}
-  %\VignetteEngine{quarto::html}
-  %\VignetteEncoding{UTF-8}
+
