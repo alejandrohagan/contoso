@@ -2,7 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-.github
 docs
 altdoc/freeze.rds
 _quarto/*
