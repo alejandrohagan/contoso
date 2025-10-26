@@ -36,7 +36,8 @@ create_contoso_duckdb <- function(db_dir= c("in_memory"),size="100K"){
     ,values = c("temp","in_memory")
     ,multiple = FALSE
   )
-  size <- "1M"
+
+  # size <- "1M"
   assertthat::assert_that(is.character(size))
   size <- stringr::str_to_lower(size)
   size_vec <- rlang::arg_match(size,values=c("100k","1m","10m"))
@@ -52,6 +53,8 @@ create_contoso_duckdb <- function(db_dir= c("in_memory"),size="100K"){
 
 
   #attach motherduck database
+
+DBI::dbExecute(con,"INSTALL motherduck;")
 
 DBI::dbExecute(con,"ATTACH 'md:_share/contoso/5cd50a2d-d482-4160-b260-f10091290db9' as contoso")
 
