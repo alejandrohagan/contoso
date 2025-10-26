@@ -6,7 +6,8 @@
 #' @name create_contoso_duckdb
 #'
 #' @details
-#' The [create_contonso_duckdb] function registers the following Contoso datasets as DuckDB tables:
+#' The `create_contonso_duckd()` function registers the following Contoso datasets as DuckDB tables:
+#'
 #' - `sales`: Contains sales transaction data.
 #' - `product`: Contains details about products, including attributes like product name, manufacturer, and category.
 #' - `customer`: Contains customer demographic and geographic information.
@@ -17,6 +18,7 @@
 #' You can choose to store the database in memory or in a temporary directory. If you choose "temp", the database will be created in a temporary file on disk. If you choose "in_memory", the database will be created entirely in memory and will be discarded after the R session ends.
 #'
 #' @return A list of lazy `tbl` objects that are references to the Contoso datasets stored in the DuckDB database. The list contains the following tables:
+#'
 #' - `sales`
 #' - `product`
 #' - `customer`
@@ -25,6 +27,7 @@
 #' - `store`
 #' - `orderrows`
 #' - `date`
+#'
 #' @examples
 #' # Create a DuckDB version of Contoso datasets stored in memory
 #'

@@ -13,6 +13,7 @@ create_contoso_duckdb(db_dir = c("in_memory"), size = "100K")
 }
 \value{
 A list of lazy `tbl` objects that are references to the Contoso datasets stored in the DuckDB database. The list contains the following tables:
+
 - `sales`
 - `product`
 - `customer`
@@ -26,7 +27,8 @@ A list of lazy `tbl` objects that are references to the Contoso datasets stored 
 Creates duckdb versions of Contoso datasets
 }
 \details{
-The [create_contonso_duckdb] function registers the following Contoso datasets as DuckDB tables:
+The `create_contonso_duckd()` function registers the following Contoso datasets as DuckDB tables:
+
 - `sales`: Contains sales transaction data.
 - `product`: Contains details about products, including attributes like product name, manufacturer, and category.
 - `customer`: Contains customer demographic and geographic information.
