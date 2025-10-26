@@ -1,9 +1,8 @@
 ---
 title: "README"
-format: gfm
 ---
 
-#Contoso
+# Contoso
 
 Contoso is a synthetic dataset containing sample sales transaction data for the fictional "Contoso" company. It includes various supporting tables for business intelligence, such as customer, store, product, and currency exchange data.
 
@@ -62,6 +61,7 @@ The relationship keys that join each of the tables are listed below.
 #| message: true
 #| error: false
 #| warning: false
+#| width: 8
 
 tibble::tibble(
     sales=c("order_key", "customer_key","store_key","product_key","currency_code")

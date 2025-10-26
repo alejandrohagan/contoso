@@ -1,7 +1,7 @@
 # README
 
 
-\#Contoso
+# Contoso
 
 Contoso is a synthetic dataset containing sample sales transaction data
 for the fictional “Contoso” company. It includes various supporting
