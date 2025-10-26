@@ -1,0 +1,42 @@
+## Order Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains information about customer orders, including order dates, delivery dates, and store details.
+
+
+
+### Usage
+
+<pre><code class='language-R'>orders
+</code></pre>
+
+
+### Format
+
+A data frame with 5 columns:
+
+
+<dl>
+<dt>order_key</dt><dd><code>double</code> Unique identifier for the order.
+</dd>
+<dt>customer_key</dt><dd><code>double</code> Unique identifier for the customer who placed the order.
+</dd>
+<dt>store_key</dt><dd><code>double</code> Unique identifier for the store where the order was placed.
+</dd>
+<dt>order_date</dt><dd><code>Date</code> The date when the order was placed.
+</dd>
+<dt>delivery_date</dt><dd><code>Date</code> The date when the order is expected to be delivered.
+</dd>
+<dt>currency_code</dt><dd><code>character</code> The currency code used for the order (e.g., USD, EUR).
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+

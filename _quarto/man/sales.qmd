@@ -1,0 +1,72 @@
+## Sales Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains information about sales orders, including order details, pricing, and customer data from the Contonso dataset.
+It provides insights into the transactions that have occurred, including order dates, delivery dates, customer and store information,
+as well as product details.
+
+
+
+### Usage
+
+<pre><code class='language-R'>sales
+</code></pre>
+
+
+### Format
+
+A data frame with sales columns:
+
+
+<dl>
+<dt>order_key</dt><dd><code>double</code> Unique identifier for each order.
+</dd>
+<dt>line_number</dt><dd><code>double</code> Line number within the order (for multi-line orders).
+</dd>
+<dt>order_date</dt><dd><code>Date</code> Date when the order was placed.
+</dd>
+<dt>delivery_date</dt><dd><code>Date</code> Date when the order was delivered.
+</dd>
+<dt>customer_key</dt><dd><code>double</code> Unique identifier for the customer who placed the order.
+</dd>
+<dt>store_key</dt><dd><code>double</code> Unique identifier for the store where the order was placed.
+</dd>
+<dt>product_key</dt><dd><code>double</code> Unique identifier for the product in the order.
+</dd>
+<dt>quantity</dt><dd><code>double</code> The quantity of the product ordered.
+</dd>
+<dt>unit_price</dt><dd><code>double</code> The price per unit of the product.
+</dd>
+<dt>net_price</dt><dd><code>double</code> The total net price for the product, considering any discounts.
+</dd>
+<dt>unit_cost</dt><dd><code>double</code> The cost per unit of the product.
+</dd>
+<dt>currency_code</dt><dd><code>character</code> The currency code used for the transaction (e.g., USD, EUR).
+</dd>
+<dt>exchange_rate</dt><dd><code>double</code> The exchange rate applied to the currency, if applicable.
+</dd>
+<dt>gross_revenue</dt><dd><code>double</code> A product's unit_price multiplied by quantity.
+</dd>
+<dt>net_revenue</dt><dd><code>double</code> A product's net_price multiplied by quantity.
+</dd>
+<dt>unit_discount</dt><dd><code>double</code> A product's unit_price minute net_price.
+</dd>
+<dt>discounts</dt><dd><code>double</code> A product's unit_discount multiplied by quantity.
+</dd>
+<dt>cogs</dt><dd><code>double</code> A product's unit_cost multiplied by quantity.
+</dd>
+<dt>margin</dt><dd><code>double</code> A product's net_revenue minus cogs.
+</dd>
+<dt>unit_margin</dt><dd><code>double</code> A product margin divided by quantity.
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+

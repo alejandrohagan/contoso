@@ -1,0 +1,23 @@
+## Create data-raw files {.unnumbered}
+
+
+### Description
+
+Creates the data-raw files of the 10K row size Contonso files if they
+they do not already exists.
+
+If it exists it will return nothing
+
+
+
+### Usage
+
+<pre><code class='language-R'>create_data_raw()
+</code></pre>
+
+
+### Value
+
+list of csv files
+
+

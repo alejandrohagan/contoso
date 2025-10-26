@@ -1,0 +1,80 @@
+## Customer Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains information about customers from the Contonso dataset, including demographic details, geographical information,
+contact information, and other personal attributes. It provides insights into customer profiles, including location, age, occupation,
+and more.
+
+
+
+### Usage
+
+<pre><code class='language-R'>customer
+</code></pre>
+
+
+### Format
+
+A data frame with 23 columns:
+
+
+<dl>
+<dt>customer_key</dt><dd><code>double</code> Unique identifier for each customer.
+</dd>
+<dt>geo_area_key</dt><dd><code>double</code> Unique identifier for the geographical area the customer resides in.
+</dd>
+<dt>start_dt</dt><dd><code>Date</code> Date when the customer relationship began.
+</dd>
+<dt>end_dt</dt><dd><code>Date</code> Date when the customer relationship ended, if applicable.
+</dd>
+<dt>continent</dt><dd><code>character</code> The continent where the customer resides.
+</dd>
+<dt>gender</dt><dd><code>character</code> The gender of the customer (e.g., 'Male', 'Female').
+</dd>
+<dt>title</dt><dd><code>character</code> The title of the customer (e.g., 'Mr.', 'Ms.').
+</dd>
+<dt>given_name</dt><dd><code>character</code> The given (first) name of the customer.
+</dd>
+<dt>middle_initial</dt><dd><code>character</code> The middle initial of the customer, if applicable.
+</dd>
+<dt>surname</dt><dd><code>character</code> The surname (last name) of the customer.
+</dd>
+<dt>street_address</dt><dd><code>character</code> The street address of the customer.
+</dd>
+<dt>city</dt><dd><code>character</code> The city where the customer resides.
+</dd>
+<dt>state</dt><dd><code>character</code> The state or province where the customer resides.
+</dd>
+<dt>state_full</dt><dd><code>character</code> The full name of the state or province.
+</dd>
+<dt>zip_code</dt><dd><code>character</code> The postal (ZIP) code of the customer's address.
+</dd>
+<dt>country</dt><dd><code>character</code> The country where the customer resides, using the country code.
+</dd>
+<dt>country_full</dt><dd><code>character</code> The full name of the country where the customer resides.
+</dd>
+<dt>birthday</dt><dd><code>Date</code> The date of birth of the customer.
+</dd>
+<dt>age</dt><dd><code>double</code> The age of the customer.
+</dd>
+<dt>occupation</dt><dd><code>character</code> The customer's occupation or profession.
+</dd>
+<dt>company</dt><dd><code>character</code> The company the customer is associated with, if applicable.
+</dd>
+<dt>vehicle</dt><dd><code>character</code> The type or make of vehicle the customer owns or drives.
+</dd>
+<dt>latitude</dt><dd><code>double</code> The latitude of the customer's address.
+</dd>
+<dt>longitude</dt><dd><code>double</code> The longitude of the customer's address.
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+

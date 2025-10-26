@@ -1,0 +1,54 @@
+## Store Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains information about stores within the Contonso dataset. It includes details about the store's geographic
+location, operational status, and physical characteristics such as size and opening/closing dates. It provides insights into the
+store network of the company.
+
+
+
+### Usage
+
+<pre><code class='language-R'>store
+</code></pre>
+
+
+### Format
+
+A data frame with 11 columns:
+
+
+<dl>
+<dt>store_key</dt><dd><code>double</code> Unique identifier for each store.
+</dd>
+<dt>store_code</dt><dd><code>double</code> A code that uniquely identifies the store.
+</dd>
+<dt>geo_area_key</dt><dd><code>double</code> Unique identifier for the geographical area where the store is located.
+</dd>
+<dt>country_code</dt><dd><code>character</code> The country code where the store is located (e.g., &quot;US&quot;, &quot;DE&quot;).
+</dd>
+<dt>country_name</dt><dd><code>character</code> The full name of the country where the store is located.
+</dd>
+<dt>state</dt><dd><code>character</code> The state or province where the store is located.
+</dd>
+<dt>open_date</dt><dd><code>Date</code> The date when the store was opened.
+</dd>
+<dt>close_date</dt><dd><code>Date</code> The date when the store was closed, if applicable.
+</dd>
+<dt>description</dt><dd><code>character</code> A description of the store (e.g., &quot;Flagship store&quot;, &quot;Outlet store&quot;).
+</dd>
+<dt>square_meters</dt><dd><code>double</code> The physical size of the store in square meters.
+</dd>
+<dt>status</dt><dd><code>character</code> The operational status of the store (e.g., &quot;Open&quot;, &quot;Closed&quot;).
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+

@@ -1,0 +1,60 @@
+## Product Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains information about products in the Contonso dataset. It includes product details such as identifiers,
+descriptions, pricing, weight, and categorization. This dataset is useful for analyzing product characteristics, pricing, and
+product-related sales insights.
+
+
+
+### Usage
+
+<pre><code class='language-R'>product
+</code></pre>
+
+
+### Format
+
+A data frame with 14 columns:
+
+
+<dl>
+<dt>product_key</dt><dd><code>double</code> Unique identifier for each product.
+</dd>
+<dt>product_code</dt><dd><code>character</code> A code that uniquely identifies the product.
+</dd>
+<dt>product_name</dt><dd><code>character</code> The name or description of the product.
+</dd>
+<dt>manufacturer</dt><dd><code>character</code> The name of the manufacturer of the product.
+</dd>
+<dt>brand</dt><dd><code>character</code> The brand of the product.
+</dd>
+<dt>color</dt><dd><code>character</code> The color of the product.
+</dd>
+<dt>weight_unit</dt><dd><code>character</code> The unit of measurement for the product's weight (e.g., &quot;kg&quot;, &quot;lbs&quot;).
+</dd>
+<dt>weight</dt><dd><code>double</code> The weight of the product.
+</dd>
+<dt>cost</dt><dd><code>double</code> The cost price of the product.
+</dd>
+<dt>price</dt><dd><code>double</code> The selling price of the product.
+</dd>
+<dt>category_key</dt><dd><code>double</code> Unique identifier for the category to which the product belongs.
+</dd>
+<dt>category_name</dt><dd><code>character</code> The name of the category to which the product belongs.
+</dd>
+<dt>sub_category_key</dt><dd><code>double</code> Unique identifier for the subcategory to which the product belongs.
+</dd>
+<dt>sub_category_name</dt><dd><code>character</code> The name of the subcategory to which the product belongs.
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+

@@ -1,0 +1,40 @@
+## Foreign Exchange Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains information about foreign exchange (FX) rates between different currencies. It includes details about the
+exchange rate for a given date, as well as the currencies involved. This dataset is useful for analyzing currency conversions
+and understanding the exchange rates between different currencies over time.
+
+
+
+### Usage
+
+<pre><code class='language-R'>fx
+</code></pre>
+
+
+### Format
+
+A data frame with 4 columns:
+
+
+<dl>
+<dt>date</dt><dd><code>Date</code> The date of the exchange rate.
+</dd>
+<dt>from_currency</dt><dd><code>character</code> The code of the source currency (e.g., &quot;USD&quot;, &quot;EUR&quot;).
+</dd>
+<dt>to_currency</dt><dd><code>character</code> The code of the target currency (e.g., &quot;GBP&quot;, &quot;JPY&quot;).
+</dd>
+<dt>exchange</dt><dd><code>double</code> The exchange rate between the source and target currencies on the given date.
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+

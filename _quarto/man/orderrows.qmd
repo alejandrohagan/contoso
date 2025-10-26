@@ -1,0 +1,46 @@
+## Order Rows Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains detailed information about the individual items (rows) within each order in the Contonso dataset. It includes
+details such as the product, quantity, pricing, and cost of each item in an order. This dataset is useful for analyzing the breakdown
+of order components and individual product sales.
+
+
+
+### Usage
+
+<pre><code class='language-R'>orderrows
+</code></pre>
+
+
+### Format
+
+A data frame with 7 columns:
+
+
+<dl>
+<dt>order_key</dt><dd><code>double</code> Unique identifier for the order to which the item belongs.
+</dd>
+<dt>line_number</dt><dd><code>double</code> Line number within the order, identifying each product line.
+</dd>
+<dt>product_key</dt><dd><code>double</code> Unique identifier for the product in the order row.
+</dd>
+<dt>quantity</dt><dd><code>double</code> The quantity of the product ordered.
+</dd>
+<dt>unit_price</dt><dd><code>double</code> The price per unit of the product.
+</dd>
+<dt>net_price</dt><dd><code>double</code> The total net price for the product, considering any applicable discounts.
+</dd>
+<dt>unit_cost</dt><dd><code>double</code> The cost per unit of the product.
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+

@@ -1,0 +1,46 @@
+project:
+  type: website
+  output-dir: ../docs/
+website:
+  title: contoso
+  code-links: true
+  navbar:
+    search: true
+    right:
+      - icon: github
+        href: https://github.com/usrbinr/contoso/
+        aria-label: contoso GitHub
+  sidebar:
+    collapse-level: 1
+    contents:
+      - text: Home
+        file: index.md
+      - section: Reference
+        contents:
+          - text: create_contoso_duckdb
+            file: man/create_contoso_duckdb.qmd
+          - text: create_data_raw
+            file: man/create_data_raw.qmd
+          - text: customer
+            file: man/customer.qmd
+          - text: date
+            file: man/date.qmd
+          - text: fx
+            file: man/fx.qmd
+          - text: orderrows
+            file: man/orderrows.qmd
+          - text: orders
+            file: man/orders.qmd
+          - text: product
+            file: man/product.qmd
+          - text: sales
+            file: man/sales.qmd
+          - text: store
+            file: man/store.qmd
+      - text: License
+        file: LICENSE.md
+      - text: Citation
+        file: CITATION.md
+format:
+  html:
+    code-link: true

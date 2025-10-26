@@ -1,0 +1,66 @@
+## Date Dimension Data from the Contonso Dataset {.unnumbered}
+
+
+### Description
+
+This dataset contains date-related information used for time-based analysis in the Contonso dataset. It includes various representations
+of date-related attributes, such as year, quarter, month, and day, along with indicators for working days. It is useful for time-series
+analysis and aggregating data by different time periods.
+
+
+
+### Usage
+
+<pre><code class='language-R'>date
+</code></pre>
+
+
+### Format
+
+A data frame with 17 columns:
+
+
+<dl>
+<dt>date</dt><dd><code>Date</code> The actual date for the record.
+</dd>
+<dt>date_key</dt><dd><code>double</code> Unique identifier for the date (often in YYYYMMDD format).
+</dd>
+<dt>year</dt><dd><code>double</code> The year part of the date.
+</dd>
+<dt>year_quarter</dt><dd><code>character</code> The year and quarter (e.g., &quot;2025 Q1&quot;).
+</dd>
+<dt>year_quarter_number</dt><dd><code>double</code> The numerical representation of the quarter (e.g., 1, 2, 3, 4).
+</dd>
+<dt>quarter</dt><dd><code>character</code> The quarter of the year (e.g., &quot;Q1&quot;, &quot;Q2&quot;).
+</dd>
+<dt>year_month</dt><dd><code>character</code> The year and month (e.g., &quot;2025-03&quot;).
+</dd>
+<dt>year_month_short</dt><dd><code>character</code> A shortened version of year and month (e.g., &quot;2025 Mar&quot;).
+</dd>
+<dt>year_month_number</dt><dd><code>double</code> The numerical representation of the year-month (e.g., 202503 for March 2025).
+</dd>
+<dt>month</dt><dd><code>character</code> The month name (e.g., &quot;March&quot;).
+</dd>
+<dt>month_short</dt><dd><code>character</code> The abbreviated month name (e.g., &quot;Mar&quot;).
+</dd>
+<dt>month_number</dt><dd><code>double</code> The numerical representation of the month (e.g., 3 for March).
+</dd>
+<dt>dayof_week</dt><dd><code>character</code> The full name of the day of the week (e.g., &quot;Monday&quot;).
+</dd>
+<dt>dayof_week_short</dt><dd><code>character</code> The abbreviated day of the week (e.g., &quot;Mon&quot;).
+</dd>
+<dt>dayof_week_number</dt><dd><code>double</code> The numerical representation of the day of the week (e.g., 1 for Monday).
+</dd>
+<dt>working_day</dt><dd><code>double</code> Indicator of whether the date is a working day (1 for working day, 0 for non-working day).
+</dd>
+<dt>working_day_number</dt><dd><code>double</code> A numerical indicator for working day (e.g., 1 for working day, 0 for non-working day).
+</dd>
+</dl>
+
+
+
+### Source
+
+https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data
+
+
