@@ -4,6 +4,7 @@ title: "README"
 
 
 ```{r}
+#| echo: false
 knitr::opts_chunk$set(
   fig.path = "man/figures/README-"
 )
