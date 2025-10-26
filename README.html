@@ -99,8 +99,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="contoso" class="level1">
-<h1>Contoso</h1>
+<section id="contoso" class="level2">
+<h2 class="anchored" data-anchor-id="contoso">Contoso</h2>
 <p>Contoso is a synthetic dataset containing sample sales transaction data for the fictional “Contoso” company. It includes various supporting tables for business intelligence, such as customer, store, product, and currency exchange data.</p>
 <p>This dataset is perfect for practicing time series analysis, financial modeling, or any business intelligence-related tasks.</p>
 <p>The package comes with the following datasets:</p>
@@ -143,11 +143,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>This will create a local duckdb database and attach the specified row size version from a motherduck database into your local database.</p>
 <p>Using view, you can see the columns’ label using the <a href="https://larmarange.github.io/labelled/index.html">labelled</a> package.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>The data is originally sourced from the <a href="https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data">sqlbi</a> github site</p>
-<section id="dataset-overview" class="level2">
-<h2 class="anchored" data-anchor-id="dataset-overview">Dataset overview</h2>
+<section id="dataset-overview" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-overview">Dataset overview</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="man/figures/contoso.svg" class="img-fluid figure-img"></p>
+<p><img src="contoso.svg" class="img-fluid figure-img"></p>
 <figcaption>Contoso</figcaption>
 </figure>
 </div>
@@ -160,19 +160,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <script>
       // Create table-specific functions using external factory
-      const tableFns_37jxr45x6tm2t1jnbwnc = TinyTable.createTableFunctions("tinytable_37jxr45x6tm2t1jnbwnc");
+      const tableFns_koemd26pwbalnmk6x3t4 = TinyTable.createTableFunctions("tinytable_koemd26pwbalnmk6x3t4");
       // tinytable span after
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: '5', j: 1 }, { i: '5', j: 2 }, { i: '5', j: 3 }, { i: '5', j: 4 }, { i: '5', j: 5 }, { i: '5', j: 6 }, { i: '5', j: 7 } ], css_id: 'tinytable_css_7nrn2ivstybfp302lazu',}, 
-          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 } ], css_id: 'tinytable_css_gvu9lz7c0odv45nx4jmj',}, 
+          { positions: [ { i: '5', j: 1 }, { i: '5', j: 2 }, { i: '5', j: 3 }, { i: '5', j: 4 }, { i: '5', j: 5 }, { i: '5', j: 6 }, { i: '5', j: 7 } ], css_id: 'tinytable_css_2tojx3sw2metzl0h9eyw',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 } ], css_id: 'tinytable_css_0jc03tpgm6t9u10exeig',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  tableFns_37jxr45x6tm2t1jnbwnc.styleCell(cell.i, cell.j, group.css_id);
+                  tableFns_koemd26pwbalnmk6x3t4.styleCell(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -181,11 +181,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
     <style>
     /* tinytable css entries after */
-    #tinytable_37jxr45x6tm2t1jnbwnc td.tinytable_css_7nrn2ivstybfp302lazu, #tinytable_37jxr45x6tm2t1jnbwnc th.tinytable_css_7nrn2ivstybfp302lazu {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
-    #tinytable_37jxr45x6tm2t1jnbwnc td.tinytable_css_gvu9lz7c0odv45nx4jmj, #tinytable_37jxr45x6tm2t1jnbwnc th.tinytable_css_gvu9lz7c0odv45nx4jmj {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_koemd26pwbalnmk6x3t4 td.tinytable_css_2tojx3sw2metzl0h9eyw, #tinytable_koemd26pwbalnmk6x3t4 th.tinytable_css_2tojx3sw2metzl0h9eyw {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_koemd26pwbalnmk6x3t4 td.tinytable_css_0jc03tpgm6t9u10exeig, #tinytable_koemd26pwbalnmk6x3t4 th.tinytable_css_0jc03tpgm6t9u10exeig {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
     </style>
     <div class="container">
-      <table class="tinytable" id="tinytable_37jxr45x6tm2t1jnbwnc" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="tinytable" id="tinytable_koemd26pwbalnmk6x3t4" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         
         <thead>
               <tr>
@@ -252,16 +252,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="installation" class="level2">
-<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<section id="installation" class="level3">
+<h3 class="anchored" data-anchor-id="installation">Installation</h3>
 <p>You can install the development version of package from <a href="https://github.com/alejandrohagan/contoso">GitHub</a> with:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("pak")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"alejandrohagan/contoso"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="example" class="level2">
-<h2 class="anchored" data-anchor-id="example">Example</h2>
+<section id="example" class="level3">
+<h3 class="anchored" data-anchor-id="example">Example</h3>
 <p>Example of how to create a duckdb database with Contoso tables loaded is below:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(contoso)</span>

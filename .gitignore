@@ -4,3 +4,6 @@
 .Ruserdata
 .github
 docs
+altdoc/freeze.rds
+_quarto/*
+!_quarto/_freeze/

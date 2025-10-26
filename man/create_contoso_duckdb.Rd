@@ -38,5 +38,8 @@ You can choose to store the database in memory or in a temporary directory. If y
 }
 \examples{
 # Create a DuckDB version of Contoso datasets stored in memory
-create_contoso_duckdb(db_dir = "in_memory",size="100K")
+
+\dontrun{
+ create_contoso_duckdb(db_dir = "in_memory",size="100K")
+}
 }

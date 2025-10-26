@@ -36,6 +36,6 @@ LazyData: true
 RoxygenNote: 7.3.2
 Depends: 
     R (>= 2.10)
-URL: https://alejandrohagan.github.io/contoso/
+URL: https://usrbinr.github.io/contoso/
 VignetteBuilder:
     quarto

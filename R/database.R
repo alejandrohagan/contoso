@@ -27,7 +27,10 @@
 #' - `date`
 #' @examples
 #' # Create a DuckDB version of Contoso datasets stored in memory
-#' create_contoso_duckdb(db_dir = "in_memory",size="100K")
+#'
+#' \dontrun{
+#'  create_contoso_duckdb(db_dir = "in_memory",size="100K")
+#' }
 #' @export
 create_contoso_duckdb <- function(db_dir= c("in_memory"),size="100K"){
 

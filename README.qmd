@@ -1,9 +1,8 @@
 ---
 title: "README"
-format: gfm
 ---
 
-# Contoso
+## Contoso
 
 Contoso is a synthetic dataset containing sample sales transaction data for the fictional "Contoso" company. It includes various supporting tables for business intelligence, such as customer, store, product, and currency exchange data.
 
@@ -47,10 +46,11 @@ Using view, you can see the columns' label using the [labelled](https://larmaran
 
 The data is originally sourced from the [sqlbi](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data) github site 
 
-## Dataset overview 
+### Dataset overview 
 
 
-![Contoso](man/figures/contoso.svg)
+![Contoso](contoso.svg)
+
 
 
 The relationship keys that join each of the tables are listed below.
@@ -78,7 +78,7 @@ tibble::tibble(
 
 ```
 
-## Installation
+### Installation
 
 You can install the development version of package from [GitHub](https://github.com/alejandrohagan/contoso) with:
 
@@ -88,7 +88,7 @@ You can install the development version of package from [GitHub](https://github.
 pak::pak("alejandrohagan/contoso")
 ```
 
-## Example
+### Example
 
 Example of how to create a duckdb database with Contoso tables loaded is below:
 
