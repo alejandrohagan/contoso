@@ -29,7 +29,6 @@ Imports:
     rlang,
     stringr
 Suggests:
-    altdoc,
     dbplyr,
     testthat (>= 3.0.0)
 Encoding: UTF-8
