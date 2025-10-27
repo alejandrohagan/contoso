@@ -1,5 +1,4 @@
 ## code to prepare `store` dataset goes here
-create_data_raw()
 
 dir <- "data-raw"
 
@@ -20,8 +19,6 @@ store_labels <- list(
     status = "Current status of the store (e.g., Closed, Restructured, NA for open)"
 )
 
-
-labelled::var_labels(store) <- store_labels
-
+labelled::var_label(store) <- store_labels
 
 usethis::use_data(store, overwrite = TRUE)

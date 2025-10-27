@@ -32,13 +32,15 @@ The package comes with the following datasets:
   
   
 Built into the package is the 10K row version of the dataset. 
-  
+
+Using `view()`, you can see the columns' label using the [labelled](https://larmarange.github.io/labelled/index.html) package.^[Inspiration from [Crystal Lewis](https://cghlewis.com/blog/dict_clean/) excellent blog post].
+
+
 If you want a larger dataset, there is also 100K, 1M and 10M which can be created with `create_contoso_duckdb()` function.
   
 This will create a local duckdb database and attach the specified row size version from a motherduck database into your local database. 
 
 
-Using view, you can see the columns' label using the [labelled](https://larmarange.github.io/labelled/index.html) package.^[Inspiration from [Crystal Lewis](https://cghlewis.com/blog/dict_clean/) excellent blog post]
 
 The data is originally sourced from the [sqlbi](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data) github site 
 

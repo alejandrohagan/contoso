@@ -1,5 +1,4 @@
 ## code to prepare `order` dataset goes here
-fpaR::create_data_raw()
 
 dir <- "data-raw"
 
@@ -17,6 +16,6 @@ order_labels <- list(
 
 # Example: Assuming 'orders' is your data frame
 
-labelled::var_labels(orders) <- order_labels
+labelled::var_label(orders) <- order_labels
 
 usethis::use_data(orders, overwrite = TRUE)

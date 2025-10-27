@@ -1,5 +1,4 @@
 ## code to prepare `date` dataset goes here
-fpaR::create_data_raw()
 
 
 dir <- "data-raw"
@@ -27,7 +26,7 @@ date_labels <- list(
 )
 
 # Example: Assuming 'dates' is your data frame
-labelled::var_labels(date) <- date_labels
+labelled::var_label(date) <- date_labels
 
 
 usethis::use_data(date, overwrite = TRUE)

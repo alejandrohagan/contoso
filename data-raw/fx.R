@@ -1,5 +1,4 @@
 ## code to prepare `fx` dataset goes here
-fpaR::create_data_raw()
 
 dir <- "data-raw"
 
@@ -14,7 +13,8 @@ fx_labels <- list(
 )
 
 # Example: Assuming 'exchange_data' is your data frame
-var_labels(fx) <- fx_labels
+labelled::var_label(fx) <- fx_labels
 
 
 usethis::use_data(fx, overwrite = TRUE)
+

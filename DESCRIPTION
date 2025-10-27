@@ -22,21 +22,20 @@ Description: This package provides access to the Contoso dataset, a made-up data
 License: MIT + file LICENSE
 Imports:
     DBI,
-    archive,
     dplyr,
     duckdb,
     purrr,
-    utils,
     assertthat,
-    glue
+    rlang,
+    stringr
 Suggests:
     altdoc,
-    dbplyr
+    dbplyr,
+    testthat (>= 3.0.0)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5)
 URL: https://usrbinr.github.io/contoso/
-VignetteBuilder:
-    quarto
+Config/testthat/edition: 3

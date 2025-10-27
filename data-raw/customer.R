@@ -1,6 +1,5 @@
 ## code to prepare `customer` dataset goes here
 
-fpaR::create_data_raw()
 
 dir <- "data-raw"
 
@@ -43,9 +42,7 @@ customer_labels <- list(
 )
 
 # Example: Assuming 'customers' is your data frame
-var_labels(customer) <- customer_labels
-
-
-
+labelled::var_label(customer) <- customer_labels
 
 usethis::use_data(customer, overwrite = TRUE)
+

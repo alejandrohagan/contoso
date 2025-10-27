@@ -71,11 +71,13 @@ schema_options_vec <- c("100k"="small","1m"="medium","10m"="large")
 
 schema_vec <- schema_options_vec[size_vec] |> unname()
 
-sql_vec <- map(
+sql_vec <- purrr::map(
   tables_vec
   ,.f=\(x)  DBI::Id("contoso",schema_vec,x)
 )
 
+
+# there's a better way to do this but I'm lazy
 
 sales_db <- dplyr::tbl(con,sql_vec[[1]])
 product_db <- dplyr::tbl(con,sql_vec[[2]])

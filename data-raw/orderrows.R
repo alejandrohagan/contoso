@@ -1,5 +1,4 @@
 ## code to prepare `orderrows` dataset goes here
-fpaR::create_data_raw()
 
 dir <- "data-raw"
 
@@ -15,7 +14,7 @@ orderrows_labels <- list(
     net_price = "Total price for the line item after any discounts",
     unit_cost = "Cost per unit of the product"
 )
-labelled::var_labels(orderrows) <- orderrows_labels
+labelled::var_label(orderrows) <- orderrows_labels
 
 
 
