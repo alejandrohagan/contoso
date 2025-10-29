@@ -46,7 +46,7 @@ create_contoso_duckdb <- function(db_dir= c("in_memory"),size="100K"){
   # size <- "1M"
   assertthat::assert_that(is.character(size))
   size <- stringr::str_to_lower(size)
-  size_vec <- rlang::arg_match(size,values=c("100k","1m","10m"))
+  size_vec <- rlang::arg_match(size,values=c("100k","1m","10m","100m"))
 
 
 
@@ -67,7 +67,7 @@ DBI::dbExecute(con,"ATTACH 'md:_share/contoso/5cd50a2d-d482-4160-b260-f10091290d
 
 tables_vec <- c("sales","product","customer","store","orders","orderrows","fx","date")
 
-schema_options_vec <- c("100k"="small","1m"="medium","10m"="large")
+schema_options_vec <- c("100k"="small","1m"="medium","10m"="large","100m"="mega")
 
 schema_vec <- schema_options_vec[size_vec] |> unname()
 
