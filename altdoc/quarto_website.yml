@@ -2,32 +2,21 @@ project:
   type: website
   output-dir: ../docs/
 
-# Note: freeze functionality can be set at a project level or for individual .qmd files
-# execute:
-#   freeze: false
-
 website:
   title: "$ALTDOC_PACKAGE_NAME"
   code-links: true
   navbar:
     search: true
-    right:
-      - icon: github
-        href: $ALTDOC_PACKAGE_URL_GITHUB
-        aria-label: $ALTDOC_PACKAGE_NAME GitHub
-      - icon: bluesky
-        href: https://bsky.app/profile/usrbinr.bsky.social
-      - icon: link
-        href: https://linktr.ee/alejandro.hagan
-
-  sidebar:
-    collapse-level: 1
-    style: "docked"
-    contents:
+    pinned: true
+    left:
       - text: Home
         file: index.qmd
-      - section: $ALTDOC_VIGNETTE_BLOCK
-      - section: $ALTDOC_MAN_BLOCK
+      - text: Vignettes
+        menu:
+          - $ALTDOC_VIGNETTE_BLOCK
+      - text: Reference
+        menu:
+          - $ALTDOC_MAN_BLOCK
       - text: News
         file: $ALTDOC_NEWS
       - text: Changelog
@@ -36,14 +25,23 @@ website:
         file: $ALTDOC_LICENSE
       - text: Licence
         file: $ALTDOC_LICENCE
-      - text: Code of conduct
+      - text: Code of Conduct
         file: $ALTDOC_CODE_OF_CONDUCT
       - text: Citation
         file: $ALTDOC_CITATION
+    right:
+      - icon: github
+        href: $ALTDOC_PACKAGE_URL_GITHUB
+        aria-label: "$ALTDOC_PACKAGE_NAME GitHub"
+      - icon: bluesky
+        href: https://bsky.app/profile/usrbinr.bsky.social
+        aria-label: "Bluesky Profile"
+      - icon: link
+        href: https://linktr.ee/alejandro.hagan
+        aria-label: "Linktree"
 
 format:
   html:
     code-link: true
-#     theme: cosmo
-#     number-sections: false
-
+    # theme: cosmo
+    # number-sections: false

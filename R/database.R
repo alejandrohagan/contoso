@@ -67,7 +67,7 @@ DBI::dbExecute(con,"ATTACH 'md:_share/contoso/5cd50a2d-d482-4160-b260-f10091290d
 
 tables_vec <- c("sales","product","customer","store","orders","orderrows","fx","date")
 
-schema_options_vec <- c("100k"="small","1m"="medium","10m"="large")
+schema_options_vec <- c("100k"="small","1m"="medium","10m"="large","100m"="mega")
 
 schema_vec <- schema_options_vec[size_vec] |> unname()
 
