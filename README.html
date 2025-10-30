@@ -86,8 +86,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="contoso" class="level2">
 <h2 class="anchored" data-anchor-id="contoso">Contoso</h2>
 <p>Contoso is a synthetic dataset containing sample sales transaction data for the fictional “Contoso” company. It includes various supporting tables for business intelligence, such as customer, store, product, and currency exchange data.</p>
-<p>This dataset is perfect for practicing time series analysis, financial modeling, or any business intelligence-related tasks.</p>
-<p>The package comes with the following datasets:</p>
+<p>This dataset is perfect for practicing time series analysis, joins, financial modeling, or any business intelligence-related tasks.</p>
+<p>It comes with a build in dataset as well as the ability to create an in-memory database with <a href="https://duckdb.org/">duckdb</a></p>
+<p>The package comes with the following tables:</p>
 <ul>
 <li><strong>sales</strong>:
 <ul>
@@ -123,9 +124,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 <p>Built into the package is the 10K row version of the dataset.</p>
-<p>Using <code>view()</code>, you can see the columns’ label using the <a href="https://larmarange.github.io/labelled/index.html">labelled</a> package.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p>If you want a larger dataset, there is also 100K, 1M and 10M which can be created with <code>create_contoso_duckdb()</code> function.</p>
-<p>This will create a local duckdb database and attach the specified row size version from a motherduck database into your local database.</p>
+<p>Using <code>view()</code>, you can see the columns’ label using the <a href="https://larmarange.github.io/labelled/index.html">labelled</a> package.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Inspiration to using <a href="https://larmarange.github.io/labelled/index.html">labelled</a> comes from <a href="https://cghlewis.com/blog/dict_clean/">Crystal Lewis</a> excellent blog post</p>
+</div>
+</div>
+<p>If you want a larger dataset, there is also 100K, 1M, 10M and 100M row version which can be created with <code>create_contoso_duckdb()</code> function.</p>
+<p>This will create a local duckdb database which will attach the specified row size version from a motherduck database into your local database.</p>
+</section>
+<section id="source" class="level2">
+<h2 class="anchored" data-anchor-id="source">Source</h2>
 <p>The data is originally sourced from the <a href="https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data">sqlbi</a> github site</p>
 <section id="dataset-overview" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-overview">Dataset overview</h3>
@@ -144,19 +161,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
     <script>
       // Create table-specific functions using external factory
-      const tableFns_gyrwrqjqi28bwyrpybnp = TinyTable.createTableFunctions("tinytable_gyrwrqjqi28bwyrpybnp");
+      const tableFns_q41f8f0p67ae6n30enwk = TinyTable.createTableFunctions("tinytable_q41f8f0p67ae6n30enwk");
       // tinytable span after
       window.addEventListener('load', function () {
           var cellsToStyle = [
             // tinytable style arrays after
-          { positions: [ { i: '5', j: 1 }, { i: '5', j: 2 }, { i: '5', j: 3 }, { i: '5', j: 4 }, { i: '5', j: 5 }, { i: '5', j: 6 }, { i: '5', j: 7 } ], css_id: 'tinytable_css_y38x6br2u6vrsww7i6qw',}, 
-          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 } ], css_id: 'tinytable_css_gqkaih0iok02ds7duo8a',}, 
+          { positions: [ { i: '5', j: 1 }, { i: '5', j: 2 }, { i: '5', j: 3 }, { i: '5', j: 4 }, { i: '5', j: 5 }, { i: '5', j: 6 }, { i: '5', j: 7 } ], css_id: 'tinytable_css_77xc0p9dpco9lgcp90ed',}, 
+          { positions: [ { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 }, { i: '0', j: 7 } ], css_id: 'tinytable_css_mdovk45ne94v9o99lx27',}, 
           ];
 
           // Loop over the arrays to style the cells
           cellsToStyle.forEach(function (group) {
               group.positions.forEach(function (cell) {
-                  tableFns_gyrwrqjqi28bwyrpybnp.styleCell(cell.i, cell.j, group.css_id);
+                  tableFns_q41f8f0p67ae6n30enwk.styleCell(cell.i, cell.j, group.css_id);
               });
           });
       });
@@ -165,11 +182,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vincentarelbundock/tinytable@main/inst/tinytable.css">
     <style>
     /* tinytable css entries after */
-    #tinytable_gyrwrqjqi28bwyrpybnp td.tinytable_css_y38x6br2u6vrsww7i6qw, #tinytable_gyrwrqjqi28bwyrpybnp th.tinytable_css_y38x6br2u6vrsww7i6qw {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
-    #tinytable_gyrwrqjqi28bwyrpybnp td.tinytable_css_gqkaih0iok02ds7duo8a, #tinytable_gyrwrqjqi28bwyrpybnp th.tinytable_css_gqkaih0iok02ds7duo8a {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_q41f8f0p67ae6n30enwk td.tinytable_css_77xc0p9dpco9lgcp90ed, #tinytable_q41f8f0p67ae6n30enwk th.tinytable_css_77xc0p9dpco9lgcp90ed {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 0; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.1em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
+    #tinytable_q41f8f0p67ae6n30enwk td.tinytable_css_mdovk45ne94v9o99lx27, #tinytable_q41f8f0p67ae6n30enwk th.tinytable_css_mdovk45ne94v9o99lx27 {  position: relative; --border-bottom: 1; --border-left: 0; --border-right: 0; --border-top: 1; --line-color-bottom: black; --line-color-left: black; --line-color-right: black; --line-color-top: black; --line-width-bottom: 0.05em; --line-width-left: 0.1em; --line-width-right: 0.1em; --line-width-top: 0.1em; --trim-bottom-left: 0%; --trim-bottom-right: 0%; --trim-left-bottom: 0%; --trim-left-top: 0%; --trim-right-bottom: 0%; --trim-right-top: 0%; --trim-top-left: 0%; --trim-top-right: 0%;  }
     </style>
     <div class="container">
-      <table class="tinytable" id="tinytable_gyrwrqjqi28bwyrpybnp" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="tinytable" id="tinytable_q41f8f0p67ae6n30enwk" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         
         <thead>
               <tr>
@@ -259,13 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Inspiration from <a href="https://cghlewis.com/blog/dict_clean/">Crystal Lewis</a> excellent blog post<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main>
+</main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

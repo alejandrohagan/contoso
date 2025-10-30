@@ -9,7 +9,7 @@ create_contoso_duckdb(db_dir = c("in_memory"), size = "100K")
 \arguments{
 \item{db_dir}{"temp" or "in_memory"}
 
-\item{size}{"100k","1M" or "10M"}
+\item{size}{"100k","1M", "10M", or "100M"}
 }
 \value{
 A list of lazy `tbl` objects that are references to the Contoso datasets stored in the DuckDB database. The list contains the following tables:

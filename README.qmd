@@ -2,9 +2,11 @@
 
 Contoso is a synthetic dataset containing sample sales transaction data for the fictional "Contoso" company. It includes various supporting tables for business intelligence, such as customer, store, product, and currency exchange data.
 
-This dataset is perfect for practicing time series analysis, financial modeling, or any business intelligence-related tasks.
+This dataset is perfect for practicing time series analysis, joins, financial modeling, or any business intelligence-related tasks.
 
-The package comes with the following datasets:
+It comes with a build in dataset as well as the ability to create an in-memory database with [duckdb](https://duckdb.org/)
+
+The package comes with the following tables:
 
 - **sales**:
   - Contains information about sales transactions, including the total sales amount, customer, store, and product involved.
@@ -33,23 +35,25 @@ The package comes with the following datasets:
   
 Built into the package is the 10K row version of the dataset. 
 
-Using `view()`, you can see the columns' label using the [labelled](https://larmarange.github.io/labelled/index.html) package.^[Inspiration from [Crystal Lewis](https://cghlewis.com/blog/dict_clean/) excellent blog post].
+Using `view()`, you can see the columns' label using the [labelled](https://larmarange.github.io/labelled/index.html) package.
 
+::: {.callout-note}
+Inspiration to using [labelled](https://larmarange.github.io/labelled/index.html) comes from [Crystal Lewis](https://cghlewis.com/blog/dict_clean/) excellent blog post
+:::
 
-If you want a larger dataset, there is also 100K, 1M, 10M and 100M which can be created with `create_contoso_duckdb()` function.
+If you want a larger dataset, there is also 100K, 1M, 10M and 100M row version which can be created with `create_contoso_duckdb()` function.
   
-This will create a local duckdb database and attach the specified row size version from a motherduck database into your local database. 
+This will create a local duckdb database which will attach the specified row size version from a motherduck database into your local database. 
 
 
-
+## Source
 The data is originally sourced from the [sqlbi](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data) github site 
+
 
 ### Dataset overview 
 
 
 ![Contoso](man/figures/contoso.svg)
-
-
 
 The relationship keys that join each of the tables are listed below.
 
