@@ -1,6 +1,6 @@
 #' @param db_dir "temp" or "in_memory"
 #'
-#' @param size "100k","1M" or "10M"
+#' @param size "100k","1M", "10M", or "100M"
 #'
 #' @title Creates duckdb versions of Contoso datasets
 #' @name create_contoso_duckdb
