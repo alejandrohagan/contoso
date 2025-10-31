@@ -7,10 +7,13 @@ for the fictional “Contoso” company. It includes various supporting
 tables for business intelligence, such as customer, store, product, and
 currency exchange data.
 
-This dataset is perfect for practicing time series analysis, financial
-modeling, or any business intelligence-related tasks.
+This dataset is perfect for practicing time series analysis, joins,
+financial modeling, or any business intelligence-related tasks.
 
-The package comes with the following datasets:
+It comes with a built-in dataset as well as the ability to create an
+in-memory database with [duckdb](https://duckdb.org/)
+
+The package comes with the following tables:
 
 - **sales**:
   - Contains information about sales transactions, including the total
@@ -39,15 +42,23 @@ The package comes with the following datasets:
 
 Built into the package is the 10K row version of the dataset.
 
-If you want a larger dataset, there is also 100K, 1M and 10M which can
-be created with `create_contoso_duckdb()` function.
+Using `view()`, you can see the columns’ label using the
+[labelled](https://larmarange.github.io/labelled/index.html) package.
 
-This will create a local duckdb database and attach the specified row
-size version from a motherduck database into your local database.
+> [!NOTE]
+>
+> Inspiration to using
+> [labelled](https://larmarange.github.io/labelled/index.html) comes
+> from [Crystal Lewis](https://cghlewis.com/blog/dict_clean/) excellent
+> blog post
 
-Using view, you can see the columns’ label using the
-[labelled](https://larmarange.github.io/labelled/index.html)
-package.[^1]
+If you want a larger dataset, there is also 100K, 1M, 10M and 100M row
+version which can be created with `create_contoso_duckdb()` function.
+
+This will create a local duckdb database which will attach the specified
+row size version from a motherduck database into your local database.
+
+## Source
 
 The data is originally sourced from the
 [sqlbi](https://github.com/sql-bi/Contoso-Data-Generator-V2-Data/releases/tag/ready-to-use-data)
@@ -70,11 +81,11 @@ The relationship keys that join each of the tables are listed below.
 ### Installation
 
 You can install the development version of package from
-[GitHub](https://github.com/alejandrohagan/contoso) with:
+[GitHub](https://github.com/usrbinr/contoso) with:
 
 ``` r
 # install.packages("pak")
-pak::pak("alejandrohagan/contoso")
+pak::pak("usrbinr/contoso")
 ```
 
 ### Example
@@ -91,6 +102,3 @@ contoso_db <- create_contoso_duckdb(dir = "temp",size = "1m")
 # Access the sales dataset from the database
 sales_data <- contoso_db$sales
 ```
-
-[^1]: Inspiration from [Crystal
-    Lewis](https://cghlewis.com/blog/dict_clean/) excellent blog post

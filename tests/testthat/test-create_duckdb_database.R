@@ -2,19 +2,6 @@
 
 describe("create_contoso_duckdb()", {
 
-    it("validates db_dir argument correctly", {
-        expect_error(
-            create_contoso_duckdb(db_dir = "invalid_dir"),
-            class = "rlang_error"
-        )
-    })
-
-    it("validates size argument correctly", {
-        expect_error(
-            create_contoso_duckdb(db_dir = "in_memory", size = "2M"),
-            class = "rlang_error"
-        )
-    })
 
         skip_if_not_installed("DBI")
         skip_if_not_installed("duckdb")

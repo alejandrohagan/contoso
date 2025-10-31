@@ -4,7 +4,7 @@ Contoso is a synthetic dataset containing sample sales transaction data for the 
 
 This dataset is perfect for practicing time series analysis, joins, financial modeling, or any business intelligence-related tasks.
 
-It comes with a build in dataset as well as the ability to create an in-memory database with [duckdb](https://duckdb.org/)
+It comes with a built-in dataset as well as the ability to create an in-memory database with [duckdb](https://duckdb.org/)
 
 The package comes with the following tables:
 
@@ -82,12 +82,12 @@ tibble::tibble(
 
 ### Installation
 
-You can install the development version of package from [GitHub](https://github.com/alejandrohagan/contoso) with:
+You can install the development version of package from [GitHub](https://github.com/usrbinr/contoso) with:
 
 ```{r}
 #| eval: false
 # install.packages("pak")
-pak::pak("alejandrohagan/contoso")
+pak::pak("usrbinr/contoso")
 ```
 
 ### Example

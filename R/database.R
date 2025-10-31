@@ -37,18 +37,12 @@
 #' @export
 create_contoso_duckdb <- function(db_dir= c("in_memory"),size="100K"){
 
-  db_dir <-  rlang::arg_match(
-    arg =db_dir
-    ,values = c("temp","in_memory")
-    ,multiple = FALSE
-  )
+  db_dir <- match.arg(db_dir, choices = c("temp", "in_memory"),several.ok = FALSE)
 
   # size <- "1M"
-  assertthat::assert_that(is.character(size))
-  size <- stringr::str_to_lower(size)
-  size_vec <- rlang::arg_match(size,values=c("100k","1m","10m","100m"))
-
-
+  stopifnot(is.character(size))
+  size <- tolower(size)
+  size_vec <- match.arg(size,choices=c("100k","1m","10m","100m"),several.ok = FALSE)
 
   if(db_dir=="temp"){
     db_dir <-   tempfile()
@@ -60,9 +54,9 @@ create_contoso_duckdb <- function(db_dir= c("in_memory"),size="100K"){
 
   #attach motherduck database
 
-DBI::dbExecute(con,"INSTALL motherduck;")
+  suppressWarnings(DBI::dbExecute(con,"INSTALL motherduck;"))
 
-DBI::dbExecute(con,"ATTACH 'md:_share/contoso/5cd50a2d-d482-4160-b260-f10091290db9' as contoso")
+  suppressWarnings(DBI::dbExecute(con,"ATTACH 'md:_share/contoso/5cd50a2d-d482-4160-b260-f10091290db9' as contoso"))
 
 
 tables_vec <- c("sales","product","customer","store","orders","orderrows","fx","date")
@@ -71,9 +65,9 @@ schema_options_vec <- c("100k"="small","1m"="medium","10m"="large","100m"="mega"
 
 schema_vec <- schema_options_vec[size_vec] |> unname()
 
-sql_vec <- purrr::map(
-  tables_vec
-  ,.f=\(x)  DBI::Id("contoso",schema_vec,x)
+sql_vec <- lapply(
+  tables_vec,
+  function(x) DBI::Id("contoso", schema_vec, x)
 )
 
 
