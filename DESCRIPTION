@@ -9,7 +9,7 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: This package provides access to the Contoso dataset, a made-up dataset simulating sales transactions from the fictional "Contoso" company. The dataset includes various related tables that contain essential business and operational data, useful for analyzing sales performance and other business insights. Key tables included in the package are:
+Description: This package provides access to a made-up dataset simulating sales transactions from the fictional "Contoso" company. The dataset includes various related tables that contain essential business and operational data, useful for analyzing sales performance and other business insights. Key tables included in the package are:
   - "sales": Contains data on individual sales transactions, including order details, pricing, quantities, and customer information.
   - "customer": Stores customer-specific details such as demographics, geographic location, occupation, and birthday.
   - "store": Provides information about stores, including location, size, status, and operational dates.

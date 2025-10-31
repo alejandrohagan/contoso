@@ -1,8 +1,8 @@
 bibentry(
-  bibtype  = "Manual",
-  title    = "Contoso Dataset",
-  author   = "Alejandro Hagan",
-  year     = "2025",
-  note     = "R package version 1.0.0",
-  url      = "https://github.com/alejandrohagan/contoso",
+  bibtype = "Manual",
+  title   = "Contoso Dataset",
+  author  = person("Alejandro", "Hagan"),
+  year    = "2025",
+  note    = paste("R package version", utils::packageDescription("contoso")$Version),
+  url     = "https://github.com/usrbinr/contoso"
 )
